@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Atividade 6 - Exercício 2</title>
+</head>
+<body>
+    <script>
+        var op;
+        var res;
+
+        num1 = prompt("Digite o primeiro número:");
+        num2 = prompt("Digite o segundo número:");
+        do{
+            op = prompt("1. Soma\n2. Subtração\n3. Multiplicação\n4. Divisão\n5. Resto da divisão\n6. Sair\n\nEscolha uma opção:");
+        
+            if(op==1){
+                res = parseFloat(num1) + parseFloat(num2);
+                alert("Resultado da soma= " + res.toFixed(2));
+            }
+            if(op==2){
+                res = parseFloat(num1) - parseFloat(num2);
+                alert("Resultado da subtração= " + res.toFixed(2));
+            }
+            if(op==3){
+                res = parseFloat(num1) * parseFloat(num2);
+                alert("Resultado da = " + res.toFixed(2));
+            }
+            if(op==4){
+                res = parseFloat(num1) / parseFloat(num2);
+                alert("Resultado = " + res.toFixed(2));
+            }
+            if(op==5){
+                res = (num1) % (num2);
+                alert("Resultado = " + res);
+            }
+        }while(op != 6);
+    </script>
+</body>
+</html>
