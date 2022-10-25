@@ -9,7 +9,7 @@ var mais_nova;
 var qtde_homens=0;
 var qtde_mulheres=0;
 
-for(var x=0; x<3; x++){
+for(var x=0; x<45; x++){
     idade[x]=parseInt(prompt("Digite a sua idade:"));
     sexo[x]=prompt("Digite o sexo (M/F):");
     opiniao[x]=prompt("Qual a sua opinião:\n\n4. Ótimo\n3. Bom\n2. Regular\n1. Péssimo");
