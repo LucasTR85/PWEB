@@ -1,0 +1,518 @@
+@font-face{
+    font-family: 'Runas';
+    src: url(./fonts/FUTHA___.TTF);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Sarala&display=swap');
+
+/*Paleta de Cores:
+#519fed - azul
+#d8edf8 - cinza claro
+#0f0e0f - Preto
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    height: 2000px;
+    background-color: #0f0e0f;
+}
+
+.cabecalho {
+    position: fixed;
+    height: 100px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .9);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu-item {
+    padding: 20px;
+    font-family: 'Sarala', sans-serif;
+    font-size: 18px;
+    text-align: center;
+    font-weight: 400;
+    color: #d8edf8;
+}
+
+.menu-item:hover {
+    background-color: #519fed;
+}
+
+.principal {
+    padding-top: 100px;
+}
+
+.inicio {
+    height: 90vh;
+    padding-top: 220px;
+    padding-bottom: 220px;
+    display: flex;
+    background-image: url(./img/Fundo.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    z-index: -1;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    margin-left: 10%;
+    padding: 60px;
+    width: 600px;
+    min-width: 195px;
+    background-color: rgba(0, 0, 0, .5);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    z-index: 0;
+}
+
+.container > h1 {
+    font-family: 'Runas', 'Times New Roman', Times, serif;
+    font-size: 60px;
+    color: #519fed;
+}
+
+.container > h2 {
+    font-family: 'Sarala', sans-serif;
+    font-size: 30px;
+    color: #d8edf8;
+}
+
+
+.menu-botoes {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.botao {
+    height: 80px;
+    width: 150px;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    font-family: 'Sarala', sans-serif;
+    font-size: 18px;
+    background-color: #d8edf8;
+    display: flex;
+    align-items: center;
+    
+}
+
+.sobre {
+    margin-top: 150px;
+    padding-bottom: 150px;
+    display: flex;
+    align-items: top;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.perfil {
+    width: 40%;
+    min-width: 400px;
+    padding: 50px;
+    background-color: rgba(216, 237, 248, .2);
+    border-radius: 30px;
+}
+
+.foto {
+    margin: auto;
+    height: 250px;
+    width: 250px;
+    border-radius: 125px;
+    background-image: url(./img/Foto_Perfil-M.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.perfil > p {
+    margin-top: 30px;
+    font-family: 'Sarala', sans-serif;
+    font-size: 20px;
+    color: #d8edf8;
+}
+
+.habilidades {
+    width: 40%;
+    min-width: 400px;
+    padding: 30px;
+    background-color: rgba(216, 237, 248, .2);
+    border-radius: 30px;
+}
+
+.habilidades > h2 {
+    margin-bottom: 20px;
+    font-family: 'Sarala', sans-serif;
+    font-size: 42px;
+    text-align: center;
+    color: #d8edf8;
+}
+
+.barra-habilidade {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.barra {
+    height: 30px;
+    width: 600px;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+.valor {
+    height: 100%;
+    padding: 5px;
+    background-color: #519fed;
+    border-radius: inherit;
+    font-family: 'Sarala', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: right;
+}
+
+#v1 {
+    max-width: 70%;
+}
+
+#v2 {
+    max-width: 50%;
+}
+
+#v3 {
+    max-width: 60%;
+}
+
+#v4 {
+    max-width: 35%;
+}
+
+#v5 {
+    max-width: 35%;
+}
+
+#v6 {
+    max-width: 25%;
+}
+
+/*----------------------ANIMAÇÕES-----------------------------*/
+@keyframes animacao{
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+}
+
+.animationCarregar{
+    animation: animacao 3s linear;
+}
+
+.container > h1:hover{
+    font-family: 'Sarala', sans-serif;
+}
+
+.botao:hover{
+    transform: scale(1.1);
+    transition: transform .2s linear;
+}
+
+.conteudo > div > img:hover {
+    transform: scale(1.5);
+    transition: transform .3s linear;
+}
+
+/*------------------------------------------------------------*/
+.certificados {
+    margin-top: 150px;
+    padding-bottom: 150px;
+    border-top: 1px solid #d8edf8;
+    padding-bottom: 150px;
+}
+
+.certificados > h2 {
+    margin-bottom: 80px;
+    margin-left: 10%;
+    font-family: 'Sarala', sans-serif;
+    font-size: 48px;
+    font-weight: 400;
+    color: #519fed;
+}
+.conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.conteudo > img {
+    width: 350px;
+}
+
+.conteudo > div > h2 {
+    font-family: 'Sarala', sans-serif;
+    font-size: 24px;
+    font-weight: 200;
+    text-align: center;
+    color: #d8edf8;
+}
+
+.projetos {
+    margin-top: 150px;
+    margin-bottom: 150px;
+    border-top: 1px solid #d8edf8;
+    padding-bottom: 150px;
+}
+
+.projetos > h2 {
+    margin-bottom: 80px;
+    margin-left: 10%;
+    font-family: 'Sarala', sans-serif;
+    font-size: 48px;
+    font-weight: 400;
+    color: #519fed;
+}
+
+.projetos-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.projeto-item {
+    width: 70%;
+    padding: 30px;
+    background-color:  rgba(216, 237, 248, .2);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.projeto-item > img {
+    width: 200px;
+}
+
+.projeto-item > p {
+    width: 60%;
+    font-family: 'Sarala', sans-serif;
+    font-size: 20px;
+    font-weight: 200;
+    color: #acc3de;
+}
+
+/*Responsividade*/
+@media screen and (max-width: 700px) {
+    .cabecalho > img {
+        height: 50%;
+    }
+
+    .menu-item {
+        padding: 10px;
+    }
+
+    .container {
+        position: relative;
+        padding: 30px;
+        width: 80%;
+        margin: auto;
+    }
+
+    .foto {
+        height: 150px;
+        width: 150px;
+        border-radius: 75px;
+    }
+
+    .perfil {
+        min-width: 260px;
+        padding: 20px;
+    }
+
+    .perfil > p{
+        margin-top: 10px;
+        font-size: 12px;
+    }
+
+    .habilidades {
+        min-width: 260px;
+    }
+
+    .habilidades > h2 {
+        font-size: 30px;
+    }
+
+    .barra-habilidade > img {
+        height: 50px;
+        width: 50px;
+    }
+
+    .barra {
+        height: 20px;
+    }
+
+    .valor {
+        font-size: 9px;
+    }
+
+    .certificados > h2 {
+        margin-bottom: 80px;
+    }
+
+    .conteudo > div > img {
+        width: 220px;
+    }
+
+    .conteudo > div > h2 {
+        font-size: 20px;
+    }
+
+    .projetos > h2 {
+        margin-bottom: 80px;
+    }
+
+    .projeto-item {
+        padding: 20px;
+    }
+
+    .projeto-item > img {
+        height: 60%;
+        width: 60%;
+    }
+
+    .projeto-item > p {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .menu-item {
+        padding: 4px;
+        font-size: .9em;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .container > h1 {
+        font-size: 45px;
+    }
+
+    .container > h2 {
+        font-size: 20px;
+        margin-bottom: 80px;
+    }
+
+    .botao {
+        height: 50px;
+        width: 120px;
+    }
+
+    .botao > img {
+        height: 25px;
+        width: 25px;
+    }
+
+    .foto {
+        height: 100px;
+        width: 100px;
+        border-radius: 50px;
+    }
+
+    .perfil {
+        min-width: 200px;
+    }
+
+    .perfil > p{
+        margin-top: 10px;
+    }
+
+    .habilidades {
+        min-width: 200px;
+    }
+
+    .habilidades > h2 {
+        font-size: 24px;
+    }
+
+    .barra-habilidade {
+        flex-direction: column;
+    }
+
+    .barra {
+        width: 180px;
+    }
+
+    .valor {
+        font-size: 11px;
+    }
+
+    .certificados > h2 {
+        margin-bottom: 40px;
+        font-size: 30px;
+    }
+
+    .conteudo > div > img {
+        width: 180px;
+    }
+
+    .conteudo > div > h2 {
+        font-size: 18px;
+    }
+
+    .projetos > h2 {
+        font-size: 36px;
+        margin-bottom: 60px;
+    }
+    
+    .projeto-item {
+        padding: 10px;
+    }
+
+    .projeto-item > img {
+        height: 80%;
+        width: 80%;
+    }
+
+    .projeto-item > p {
+        font-size: 14px;
+    }
+}
